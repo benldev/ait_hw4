@@ -1,0 +1,23 @@
+<form method="GET">
+Number of words: <input type="number" name="number">
+Separator: <select name="separator">
+  <option value=" " selected>space" "</option>
+  <option value=",">comma","</option>
+  <option value="/">slash"/"</option>
+</select>
+<input type="submit" value="ROLL!">
+</form>
+
+{{#if hasPhrase}}
+<p>{{phrases.phrase}}</p>
+<p>
+  {{#each phrases.arr}}
+    {{this.[0]}}
+  {{/each}}
+</p>
+<p>
+  {{#each phrases.arr}}
+    {{this.[1]}}
+  {{/each}}
+</p>
+{{/if}}
